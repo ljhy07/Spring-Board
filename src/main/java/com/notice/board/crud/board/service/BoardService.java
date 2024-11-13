@@ -1,11 +1,10 @@
 package com.notice.board.crud.board.service;
 
-import com.notice.board.crud.board.dto.BoardListResponseDto;
-import com.notice.board.crud.board.dto.BoardRequestDto;
-import com.notice.board.crud.board.dto.BoardResponseDto;
-import com.notice.board.crud.board.entity.Board;
-import com.notice.board.crud.board.repository.BoardRepository;
-import jakarta.persistence.Id;
+import com.notice.board.crud.board.service.dto.BoardListResponseDto;
+import com.notice.board.crud.board.service.dto.BoardRequestDto;
+import com.notice.board.crud.board.service.dto.BoardResponseDto;
+import com.notice.board.crud.board.domain.Board;
+import com.notice.board.crud.board.domain.repository.BoardRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

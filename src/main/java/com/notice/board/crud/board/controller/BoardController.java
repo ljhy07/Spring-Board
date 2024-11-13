@@ -1,17 +1,16 @@
 package com.notice.board.crud.board.controller;
 
-import com.notice.board.crud.board.dto.BoardListResponseDto;
-import com.notice.board.crud.board.dto.BoardRequestDto;
-import com.notice.board.crud.board.dto.BoardResponseDto;
+import com.notice.board.crud.board.service.dto.BoardListResponseDto;
+import com.notice.board.crud.board.service.dto.BoardRequestDto;
+import com.notice.board.crud.board.service.dto.BoardResponseDto;
 import com.notice.board.crud.board.service.BoardService;
-import lombok.Getter;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController // json으로 데이터를 주고 받음
 public class BoardController {
-   private final BoardService boardService;
+    private final BoardService boardService;
 
     public BoardController(BoardService boardService) {
         this.boardService = boardService;
@@ -24,6 +23,7 @@ public class BoardController {
         return board;
     }
 
+    
     @GetMapping("/boards")
     public List<BoardListResponseDto> getAllBoards(){
         return boardService.findAllBoard();

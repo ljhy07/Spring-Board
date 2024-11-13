@@ -1,7 +1,7 @@
-package com.notice.board.crud.board.entity;
+package com.notice.board.crud.board.domain;
 
-import com.notice.board.crud.board.dto.BoardRequestDto;
-import com.notice.board.crud.board.repository.BoardRepository;
+import com.notice.board.crud.board.service.dto.BoardRequestDto;
+import com.notice.board.crud.user.domain.User;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -16,7 +16,11 @@ public class Board {
     @Id
     private Long BoardId;
 
-    @Column(nullable = false)
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "users_id")
+    private User user;
+
+    @Column(nullable = false, length = 200)
     private String title;
 
     @Column(nullable = false)

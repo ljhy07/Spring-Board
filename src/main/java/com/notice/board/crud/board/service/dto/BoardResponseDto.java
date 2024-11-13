@@ -1,6 +1,6 @@
-package com.notice.board.crud.board.dto;
+package com.notice.board.crud.board.service.dto;
 
-import com.notice.board.crud.board.entity.Board;
+import com.notice.board.crud.board.domain.Board;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
